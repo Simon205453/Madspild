@@ -108,8 +108,24 @@ h1{
 
 </div>
     <div class = "column">
-        <img src="https://www.madskoler.dk/media/st3lyjzd/madspild-madskoler-a4.png">
+        <img class="imageMadspild" src="https://www.madskoler.dk/media/st3lyjzd/madspild-madskoler-a4.png">
+        <img class="imageMadspild" src="https://i0.wp.com/komnudanmark.dk/wp-content/uploads/2015/11/madspild.png?fit=640%2C358">
+        <img class="imageMadspild" src="https://cdn.lorry.bazo.dk/images/59b237e7-8f36-4f20-ab4e-4bdf8ada0421/d/16-9/s/2048">
     </div>
-
+<script>
+    var imageIndex = 0; //var variable til billed indeksering
+    carousel() // carousel, en javascript function til at slide mellem billeder
+     function carousel(){
+        var i;
+        var x = document.getElementsByClassName("imageMadspild") //får alle elementer med samme class-name og lægger dem i variablen x
+         for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none"; //vi fjerner displayed fra billederne, så de ikke kan ses sammen.
+         }
+         imageIndex++;
+         if (imageIndex > x.length) {imageIndex = 1} //reset til vores fori loop, da carousel vil køre forever.
+         x[imageIndex-1].style.display = "block"; //sætter billede på index i til at kunne ses.
+         setTimeout(carousel, 2000); // hvor lang pause carousel skal holde efter hvert execute.
+     }
+</script>
 </body>
 </html>
