@@ -7,16 +7,33 @@
 
 <style>
     .menu ul{
+        background-color: lightgreen;
         float: left;
         list-style: none;
         margin: 0;
         padding: 4px 12px;
-        border-style: solid;
-        width: 33%;
+        width: 33.33%;
         box-sizing: border-box;
         text-align: center;
     }
-
+    body{
+        background-image: url("https://www.msetconf.org/wp-content/uploads/2018/10/Web-Page-Background-Color.jpg");
+        width: 100%;
+    }
+    .column{
+        float: left;
+        width: 100%;
+        height: 700px;
+    }
+    h1{
+        text-align: center;
+    }
+    .miniRow{
+        float: left;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
 
 </style>
 <style>
@@ -39,18 +56,26 @@
         <li><a href="links">Helpful links</a></li>
     </ul>
 </div>
+<div class = "miniRow">
+    <h1> Om os!</h1>
+</div>
+<div class = "column">
+    <h1> Tre Datamatiker studerende fra KEA.</h1>
+    <h1> Asger - Mr Zando. Bedste CS Fragger i gruppen! </h1>
+    <h1> Mikkel - Meerwaldten. Bedste til at feede i Dota! </h1>
+    <h1> Simon - Mr Leanowski. Den varmeste beerpong spiller i klassen! </h1>
 
 
+</div>
+
+<!--
 <div class="image-display">
-
     <img class="ourSlides" src="https://play-lh.googleusercontent.com/3L94mFtBEqwIsL_A2fz1sGutA-jABWpCFaRPro30gEeeaFon-FGdkB3kuTsxPl-hCAar" style="width:auto">
     <img class="ourSlides" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1397194392/5cd012fd4e1a5a555602a8032372291a.png" style="width:auto">
-
 </div>
 <script>
     var image = 0;
     carousel();
-
     function carousel() {
         var i;
         var x = document.getElementsByClassName("ourSlides");
@@ -63,5 +88,6 @@
         setTimeout(carousel, 2000); // Change image every 2 seconds
     }
 </script>
+-->
 </body>
 </html>

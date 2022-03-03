@@ -11,121 +11,101 @@
         list-style: none;
         margin: 0;
         padding: 4px 12px;
-
-        width: 33%;
+        width: 33.33%;
         box-sizing: border-box;
         text-align: center;
         background-color: lightgreen;
+        border-bottom-color: lightgreen;
     }
-
-
     img{
         width: 100%;
         height: 575px;
         position: static;
     }
+    .column{
+        float: left;
+        width: 33.33%;
+        height: 600px;
+        box-sizing: border-box;
+        padding: 5px 5px;
+    }
+    .column1{
+        float: left;
+        width: 33.33%;
+        height: 350px;
+        box-sizing: border-box;
+        padding: 5px 5px;
+    }
+    .row{
+        float: left;
+        width: 33.33%;
+        height: 600px;
+        box-sizing: border-box;
 
-  .column{
-     float: left;
-      width: 33.33%;
-      height: 600px;
-      box-sizing: border-box;
+        padding: 5px 5px;
+    }
+    h1{
+        font-size: 75px;
 
-      padding: 5px 5px;
-  }
+    }
+    h2{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .miniRow{
+        float: left;
+        width: 100%;
+        height: 200px;
+        box-sizing: border-box;
+        text-align: center;
 
-  .row{
-      float: left;
-      width: 33.33%;
-      height: 600px;
-      box-sizing: border-box;
-
-      padding: 5px 5px;
-  }
-
-h1{
-    font-size: 50px;
-
-}
-
-
-
-
-  .miniRow{
-      float: left;
-      width: 100%;
-      height: 100px;
-      box-sizing: border-box;
-      text-align: center;
-      border-style: solid;
-      border-top-color: white;
-      border-left-color: white;
-      border-right-color: white;
-     border-bottom-color: lightgreen;
-
-  }
+    }
+    body{
+        background-image: url("https://www.msetconf.org/wp-content/uploads/2018/10/Web-Page-Background-Color.jpg");
+        width: 100%;
+    }
 
 </style>
 
 <body>
 
-
-    <div class="menu">
-        <ul>
-            <li> <a href="links">Links til gode ting</a></li>
-        </ul>
-    </div>
-    <div class = "menu">
-        <ul>
-            <li><a href="stats">Stats</a></li>
-        </ul>
-    </div>
-    <div class = "menu">
-        <ul>
-            <li><a href="about">About us</a></li>
-        </ul>
-    </div>
-
-
-    <div class = "miniRow">
-        <h1>Danmark mod Madspild!</h1>
-    </div>
-
-
+<div class = "menu">
+    <ul>
+        <li> <a href="links">Links til gode ting</a></li>
+    </ul>
+</div>
+<div class = "menu">
+    <ul>
+        <li><a href="stats">Stats</a></li>
+    </ul>
+</div>
+<div class = "menu">
+    <ul>
+        <li><a href="about">About us</a></li>
+    </ul>
+</div>
+<div class = "miniRow">
+    <h1>Danmark mod Madspild!</h1>
+</div>
 <div class = "row">
     <img src="https://kiselgaarden.dk/wp-content/uploads/IMG_0153.jpg">
 </div>
+<div class = "column1">
+    <h2> Danmark mod madspild!</h2>
 
-<div class = "column">
-    <h2> Værd at vide om madspild</h2>
-    <p> •Madspildet i den danske servicesektor udgør 227.000-ton pr. år. Til sammenligning er det samlede madspild fra husholdningerne 261.000-ton pr. år.</p>
-
-    <p> •Det største madspild i servicesektoren stammer fra detailhandelen, der spilder 163.000 tons pr. år, svarende til 72 % af servicesektorens madspild.</p>
-
-    <p> •Af detailhandelens madspild står specialforretninger som slagtere, fiskeforretninger og grønthandlere for 12.000 tons pr. år, mens ikke-specialiserede forretninger som kiosker, købmænd, supermarkeder og varehuse står for 151.000-ton pr. år.</p>
+    <p>Hvis du ligesom os synes at der er alt for meget madspild i Danmark, så har vi prøvet at gøre det nemmere for dig at gøre en forskel!</p>
+    <p>Vi har samlet forskellige brugbare ting på denne smukke hjemmeside!</p>
+    <p>Du finder i toppen af hjemmesiden links til forskellige relevante hjemmesider!</p>
+    <p>Der er links til hjemmesider hvor du kan skaffe mad der ellers ville blive smidt ud, links til lidt stats omkring madspild i Danmark og sidst lidt om os!</p>
 
 
 
 </div>
-    <div class = "column">
-        <img class="imageMadspild" src="https://www.madskoler.dk/media/st3lyjzd/madspild-madskoler-a4.png">
-        <img class="imageMadspild" src="https://i0.wp.com/komnudanmark.dk/wp-content/uploads/2015/11/madspild.png?fit=640%2C358">
-        <img class="imageMadspild" src="https://cdn.lorry.bazo.dk/images/59b237e7-8f36-4f20-ab4e-4bdf8ada0421/d/16-9/s/2048">
-    </div>
-<script>
-    var imageIndex = 0; //var variable til billed indeksering
-    carousel() // carousel, en javascript function til at slide mellem billeder
-     function carousel(){
-        var i;
-        var x = document.getElementsByClassName("imageMadspild") //får alle elementer med samme class-name og lægger dem i variablen x
-         for (i = 0; i < x.length; i++) {
-             x[i].style.display = "none"; //vi fjerner displayed fra billederne, så de ikke kan ses sammen.
-         }
-         imageIndex++;
-         if (imageIndex > x.length) {imageIndex = 1} //reset til vores fori loop, da carousel vil køre forever.
-         x[imageIndex-1].style.display = "block"; //sætter billede på index i til at kunne ses.
-         setTimeout(carousel, 2000); // hvor lang pause carousel skal holde efter hvert execute.
-     }
-</script>
+<div class = "column">
+    <img src="https://www.madskoler.dk/media/st3lyjzd/madspild-madskoler-a4.png">
+</div>
+
 </body>
 </html>
